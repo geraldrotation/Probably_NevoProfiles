@@ -22,7 +22,16 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
 }},
 
 
+{"Blade flurry", {
+  "!toggle.blade",
+  "player.buff(blade flurry)",
+  "player.spell(blade flurry).cooldown <= 11"
+}},
 
+{"Blade flurry", {
+  "toggle.blade",
+  "!player.buff(blade flurry)",
+}},
 
  -- Poison in combat should it ever fall
  { "Deadly Poison", {
@@ -35,7 +44,7 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
 {"Cloak of shadows", "modifier.lshift"},  
 { "Redirect", (function() return canRED("Player","Target") end)},
 
-
+--{"Blade Flurry", "modifier.lshift"},
 {"Smoke bomb", "modifier.lalt"},  
 { "Shiv", "target.dispellable(Shiv)", "target" },
  --HEALTHSTONES CODE.
@@ -236,5 +245,6 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
  function()
  ProbablyEngine.toggle.create('feint', 'Interface\\Icons\\ability_rogue_feint','Feint','Enable or Disable use of feint')
  ProbablyEngine.toggle.create('vanish', 'Interface\\Icons\\ability_vanish','Vanish','Enable or Disable use of Vanish') 
- ProbablyEngine.toggle.create('rupture', 'Interface\\Icons\\ability_rogue_rupture','Rupture','Enable or Disable use of Rupture')   
+ ProbablyEngine.toggle.create('rupture', 'Interface\\Icons\\ability_rogue_rupture','Rupture','Enable or Disable use of Rupture')  
+ ProbablyEngine.toggle.create('blade', 'Interface\\Icons\\ability_rogue_slicedice.png','Blade Flurry','Enable or Disable use of BladeFlurry') 
  end)

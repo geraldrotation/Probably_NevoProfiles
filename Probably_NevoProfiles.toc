@@ -1,5 +1,5 @@
 ## Interface: 50400
-## Title: Probably - [|cFFC41F3BSubCity|r]
+## Title: Probably - [|cFFC41F3BNevoProfiles|r]
 ## Notes: ProbablyEngine Custom Subtlety Rogue
 ## Dependencies: Probably
 
