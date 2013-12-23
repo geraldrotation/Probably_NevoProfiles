@@ -1,0 +1,13 @@
+## Interface: 50400
+## Title: Probably - [|cFFC41F3BSubCity|r]
+## Notes: ProbablyEngine Custom Subtlety Rogue
+## Dependencies: Probably
+
+# Libs
+Mah shit\NevoLib.lua
+
+
+# Rotation m8
+Fok off\Sub.lua
+Fok off\Assassination.lua
+Fok off\Combat.lua
