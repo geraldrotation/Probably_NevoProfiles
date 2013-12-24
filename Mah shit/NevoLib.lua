@@ -69,7 +69,8 @@ function Nevo.shdmsg()
   if UnitBuff("player", GetSpellInfo(51713)) then
    xrn:message("\124cFF008cba.::Shadow danceing::.")
     return true
-  end
+else
+end
   return false
 
 end
@@ -116,24 +117,36 @@ function Nevo.CPooling()
 end
 
 
+--function Nevo.yolo()
+--    if ProbablyEngine.condition["modifier.toggle"]('multitarget') then
+ --      xrn:message("\.::Aoe On::.")
+--    else
+--    xrn:message("\.::Aoe Off::.")
+--    end
+--
+ --   return false
+--end
+
+
 ------------------------------------
 ------TESTING SHIT LoL WTF IS DIS----
 local function onUpdate(self,elapsed) 
-  if self.time < GetTime() - 6 then
+  if self.time < GetTime() - 3 then
 if self:GetAlpha() == 0 then self:Hide() else self:SetAlpha(self:GetAlpha() - .05) end
   end
 end
 xrn = CreateFrame("Frame",nil,ChatFrame1) 
-xrn:SetSize(ChatFrame1:GetWidth(),300)
+xrn:SetSize(ChatFrame1:GetWidth(),30)
+xrn:SetSize(ChatFrame1:GetHeight(),30)
 xrn:Hide()
 xrn:SetScript("OnUpdate",onUpdate)
 xrn:SetPoint("TOP",650,600)
-xrn.text = xrn:CreateFontString(nil,"OVERLAY","MovieSubtitleFont")
+xrn.text = xrn:CreateFontString(2,"OVERLAY","MovieSubtitleFont")
 xrn.text:SetAllPoints()
 xrn.texture = xrn:CreateTexture()
 xrn.texture:SetAllPoints()
-xrn.texture:SetTexture(100,100,100,.0) 
-xrn.time = 0
+xrn.texture:SetTexture(100,100,100,100) 
+xrn.time = 1
 function xrn:message(message) 
   self.text:SetText(message)
   self:SetAlpha(1)

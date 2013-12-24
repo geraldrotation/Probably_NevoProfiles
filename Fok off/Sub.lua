@@ -4,20 +4,22 @@
 ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 
 
-{"recuperate",{
+--{"testing", "@Nevo.yolo"},
+
+{"73651",{ --Recupe
 	"!target.alive",
 	"player.combopoints <= 3",
-	"player.buff(slice and dice).duration > 24"
+	"player.buff(5171).duration > 24" --slice and dice
 }},
 
 
-{"slice and dice", {
+{"5171", { --SnD
 	"!target.alive",
 	"player.combopoints >= 2",
-	"player.buff(slice and dice).duration <= 18"
+	"player.buff(5171).duration <= 18" --SnD
 }},
 
-{ "Redirect", (function() return canRED("Player","Target") end)},
+{ "73981", (function() return canRED("Player","Target") end)},
 
 -- Feint stuff
 
@@ -73,8 +75,8 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 "player.spell(Marked for death).exists",
 }},
 
-{"slice and dice", {
-"player.buff(slice and dice).duration <= 3",
+{"5171", { --SnD
+"player.buff(5171).duration <= 3", --SnD
 "player.combopoints >= 3",
 }},
 
