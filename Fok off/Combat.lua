@@ -129,7 +129,7 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
   "modifier.cooldowns",
   "player.energy < 35",
   "!player.buff (adrenaline rush)",
-  "!player.buff (Shadow blades"
+  "!player.buff (Shadow blades)",
   }},
   
   
@@ -156,7 +156,7 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
   "target.debuff(revealing strike).duration > 2"
   }},
   
-  {"Revealing strike", "target.debuff(revealing strike).duration <= 1.5"},
+  {"Revealing strike", "target.debuff(revealing strike).duration <= 0.5"},
   
   {"Sinister strike", {
   "!player.spell(114015).exists",

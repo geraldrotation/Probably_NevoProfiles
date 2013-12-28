@@ -289,7 +289,7 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 }},
 
 
-{"Hemorrhage", {"@Nevo.Hemo()", "target.debuff(Hemorrhage).duration <= 2", "!player.buff(Shadow Dance)" }},
+{"Hemorrhage", {"@Nevo.Hemo()", "target.debuff(Hemorrhage).duration <= 0.5", "!player.buff(Shadow Dance)" }},
 
 --With anticipation
 {"Backstab", {
