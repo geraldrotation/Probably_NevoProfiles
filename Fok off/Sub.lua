@@ -4,30 +4,28 @@
 ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 
 
---{"testing", "@Nevo.yolo"},
-
-{"73651",{ --Recupe
+{"recuperate",{
 	"!target.alive",
 	"player.combopoints <= 3",
-	"player.buff(5171).duration > 24" --slice and dice
+	"player.buff(slice and dice).duration > 24"
 }},
 
 
-{"5171", { --SnD
+{"slice and dice", {
 	"!target.alive",
 	"player.combopoints >= 2",
-	"player.buff(5171).duration <= 18" --SnD
+	"player.buff(slice and dice).duration <= 18"
 }},
 
-{ "73981", (function() return canRED("Player","Target") end)},
+{ "Redirect", (function() return canRED("Player","Target") end)},
 
 -- Feint stuff
 
-{ "Feint", {
-"!player.buff(Feint)",
-"toggle.feint",
-"player.heath <= 75",
- }},
+--{ "Feint", {
+--"!player.buff(Feint)",
+--"toggle.feint",
+--"player.heath <= 75",
+-- }},
 
 
 --Enrage dispells 
@@ -57,7 +55,7 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 
 ---- Hotkey bindings. + Random shit im not organised you little bitch dont judge me
 {"Cloak of shadows", "modifier.lshift"},
-{"Dismantle", "modifier.lcontrol"},
+{"Feint", "modifier.lcontrol"},
 {"Smoke bomb", "modifier.lalt"},
 
 -- Tricks of the trade focus target shit.
@@ -75,8 +73,8 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 "player.spell(Marked for death).exists",
 }},
 
-{"5171", { --SnD
-"player.buff(5171).duration <= 3", --SnD
+{"slice and dice", {
+"player.buff(slice and dice).duration <= 3",
 "player.combopoints >= 3",
 }},
 
@@ -94,10 +92,9 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 
 {"Eviscerate", {
 "@Nevo.Evis()",
-"player.buff(115189).count >= 4", --Anticipation buff
 "target.debuff(find weakness)",
 "!player.buff(115192)", --subterfuge
---"!player.buff(Shadow dance)",
+"!player.buff(Shadow Dance)",
 "player.combopoints = 5",
 }},
 
@@ -146,7 +143,11 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 }},
 
 
-{"Shadow dance", {
+{{
+{"Shadow dance", "target.debuff(Garrote).duration >= 8.5"},
+{"Shadow dance", "target.debuff(Hemorrhage).duration >= 8.5"},
+{"Shadow dance", "target.debuff(Rupture).duration >= 8.5"}
+},{
 "modifier.cooldowns",
 "player.energy >= 70",
 "target.range <= 5",
@@ -156,7 +157,11 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 }},
 
 
-{"Shadow dance", {
+{{
+{"Shadow dance", "target.debuff(Garrote).duration >= 8.5"},
+{"Shadow dance", "target.debuff(Hemorrhage).duration >= 8.5"},
+{"Shadow dance", "target.debuff(Rupture).duration >= 8.5"}
+},{
 "modifier.cooldowns",
 "player.energy >= 70",
 "target.range <= 5",
@@ -166,11 +171,40 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 "target.debuff(Find weakness).duration <= 7.3",
 }},
 
-{"Vanish", {
+
+
+
+--{"Shadow dance", {
+--"modifier.cooldowns",
+--"player.energy >= 70",
+--"target.range <= 5",
+--"!player.buff(Stealth)",
+--"!player.buff(Vanish)",
+--"target.debuff(Find weakness).duration <= 3",
+--}},
+
+
+--{"Shadow dance", {
+--"modifier.cooldowns",
+--"player.energy >= 70",
+--"target.range <= 5",
+--"!player.buff(Stealth)",
+--"!player.buff(Vanish)",
+--"player.buff(master of subtlety)",
+--"target.debuff(Find weakness).duration <= 7.3",
+--}},
+
+
+
+
+{{
+{"Vanish", "target.debuff(Garrote).duration >= 3.5"},
+{"Vanish", "target.debuff(Hemorrhage).duration >= 3.5"},
+{"Vanish", "target.debuff(Rupture).duration >= 3.5"}
+},{
 "modifier.cooldowns",
 "toggle.vanish",
 "player.energy >= 55",
-"target.debuff(Rupture)",
 "player.spell(114015).exists", --Anticipation
 "player.buff(115189).count <= 4", --Anticipation buff
 "player.spell(shadow dance).cooldown >= 4",
@@ -178,6 +212,36 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 "!player.buff(master of subtlety)",
 "target.debuff(Find weakness).duration <= 2",
 }},
+
+{{
+{"Vanish", "target.debuff(Garrote).duration >= 3.5"},
+{"Vanish", "target.debuff(Hemorrhage).duration >= 3.5"},
+{"Vanish", "target.debuff(Rupture).duration >= 3.5"}
+},{
+"modifier.cooldowns",
+"toggle.vanish",
+"player.energy >= 55",
+"player.spell(114015).exists", --Anticipation
+"player.buff(115189).count > 1",
+"player.combopoints <= 4", --Anticipation buff
+"player.spell(shadow dance).cooldown >= 4",
+"!player.buff(shadow dance)",
+"!player.buff(master of subtlety)",
+"target.debuff(Find weakness).duration <= 2",
+}},
+
+--{"Vanish", {
+--"modifier.cooldowns",
+--"toggle.vanish",
+--"player.energy >= 55",
+--"target.debuff(Rupture)",
+--"player.spell(114015).exists", --Anticipation
+--"player.buff(115189).count <= 4", --Anticipation buff
+--"player.spell(shadow dance).cooldown >= 4",
+--"!player.buff(shadow dance)",
+--"!player.buff(master of subtlety)",
+--"target.debuff(Find weakness).duration <= 2",
+--}},
 
 --without anticipation
 {"Vanish", {
@@ -225,7 +289,7 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 }},
 
 
-{"Hemorrhage", "target.debuff(Hemorrhage).duration <= 0.5"},
+{"Hemorrhage", {"@Nevo.Hemo()", "target.debuff(Hemorrhage).duration <= 2", "!player.buff(Shadow Dance)" }},
 
 --With anticipation
 {"Backstab", {
@@ -295,10 +359,10 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 ---OOC HERE
 {
 
-{"703", "!target.debuff(Rupture)"},
+{"703", { "!target.debuff(Rupture)"}, "target" },
 
 
-{"Ambush"}, --{
+{"Ambush", { "target.alive"}, "target"}, --{
 --"target.debuff(Garrote)",
 --}},
 
@@ -316,6 +380,6 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 
 },
  function()
- ProbablyEngine.toggle.create('feint', 'Interface\\Icons\\ability_rogue_feint','Feint','Enable or Disable use of feint')
+ --ProbablyEngine.toggle.create('feint', 'Interface\\Icons\\ability_rogue_feint','Feint','Enable or Disable use of feint')
  ProbablyEngine.toggle.create('vanish', 'Interface\\Icons\\ability_vanish','Vanish','Enable or Disable use of Vanish')	  
  end)
