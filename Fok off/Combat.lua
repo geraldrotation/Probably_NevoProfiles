@@ -239,7 +239,7 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
   { "Leeching Poison", "!player.buff(Leeching Poison)" },
    
    --AMBUSH FOR VANISHING AND OPENER YOU FKIN PUSSY M8
-  {"Ambush" } 
+{"Ambush", { "target.alive"}, "target"}, 
 
   },
  function()

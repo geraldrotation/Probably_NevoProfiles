@@ -128,7 +128,7 @@ ProbablyEngine.rotation.register_custom(259, "~|cFFC41F3BNevoAssassin|r~", {
 
 
 --{"1329", "player.buff(11327)"}, -- Mutilate if vanishbuff.
-{"1329"},
+{"1329", { "target.alive"}, "target"},
 }
 
 )
