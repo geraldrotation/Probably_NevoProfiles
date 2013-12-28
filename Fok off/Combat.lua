@@ -46,6 +46,7 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
 
 --{"Blade Flurry", "modifier.lshift"},
 {"Smoke bomb", "modifier.lalt"},  
+{"feint", "modifier.lcontrole"},
 { "Shiv", "target.dispellable(Shiv)", "target" },
  --HEALTHSTONES CODE.
  {"#5512", "player.health <= 45"},
@@ -229,21 +230,21 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
   }, 
   --OOC 
   {
- 
+ {"Ambush", { "target.alive"}, "target"},
    -- Poisons
   { "Deadly Poison", {
    "player.alive",
    "!player.buff(Deadly Poison)"
    }},
    
-  { "Leeching Poison", "!player.buff(Leeching Poison)" },
+  { "Leeching Poison", "!player.buff(Leeching Poison)", "player.spell(108211).exists" },
    
    --AMBUSH FOR VANISHING AND OPENER YOU FKIN PUSSY M8
-{"Ambush", { "target.alive"}, "target"}, 
+ {"Ambush", { "target.alive"}, "target"}, 
 
   },
  function()
- ProbablyEngine.toggle.create('feint', 'Interface\\Icons\\ability_rogue_feint','Feint','Enable or Disable use of feint')
+-- ProbablyEngine.toggle.create('feint', 'Interface\\Icons\\ability_rogue_feint','Feint','Enable or Disable use of feint')
  ProbablyEngine.toggle.create('vanish', 'Interface\\Icons\\ability_vanish','Vanish','Enable or Disable use of Vanish') 
  ProbablyEngine.toggle.create('rupture', 'Interface\\Icons\\ability_rogue_rupture','Rupture','Enable or Disable use of Rupture')  
  ProbablyEngine.toggle.create('blade', 'Interface\\Icons\\ability_rogue_slicedice.png','Blade Flurry','Enable or Disable use of BladeFlurry') 
