@@ -22,15 +22,17 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
 }},
 
 
-{"Blade flurry", {
-  "!toggle.blade",
-  "player.buff(blade flurry)",
-  "player.spell(blade flurry).cooldown <= 11"
-}},
+
 
 {"Blade flurry", {
   "toggle.blade",
   "!player.buff(blade flurry)",
+  --"player.spell(blade flurry).cooldown <= 11"
+}},
+
+{ "/cancelaura Blade Flurry", {
+  "!toggle.blade",
+  "player.buff(blade flurry)",
 }},
 
  -- Poison in combat should it ever fall
@@ -46,11 +48,7 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
 
 --{"Blade Flurry", "modifier.lshift"},
 {"Smoke bomb", "modifier.lalt"},  
-<<<<<<< HEAD
 --{"/run ProbablyEngine.buttons.toggle('blade')", "modifier.lcontrol"},
-=======
-{"feint", "modifier.lcontrole"},
->>>>>>> parent of 01dd310... Something something macro
 { "Shiv", "target.dispellable(Shiv)", "target" },
  --HEALTHSTONES CODE.
  {"#5512", "player.health <= 45"},
