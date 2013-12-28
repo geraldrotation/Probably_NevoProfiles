@@ -42,7 +42,7 @@ end
 
 
 function Nevo.Ambush()
-    if UnitPower("player") >= (0 + Nevo.Pooling()) then
+    if UnitPower("player") >= (40 + Nevo.Pooling()) then
         return true
     end
 end
@@ -54,7 +54,7 @@ function Nevo.BackStab()
 end
 
 function Nevo.Hemo()
-    if UnitPower("player") >= (30 + Nevo.Pooling()) then
+    if UnitPower("player") >= (35 + Nevo.Pooling()) then
         return true
     end
 end

@@ -284,12 +284,12 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 {"Ambush", {
 "@Nevo.Ambush",
 "player.spell(114015).exists", --Anticipation
-"player.buff(115189).count >= 3", --Anticipation buff
+"player.buff(115189).count >= 1", --Anticipation buff
 "player.combopoints < 5",
 }},
 
 
-{"Hemorrhage", {"@Nevo.Hemo()", "target.debuff(Hemorrhage).duration <= 0.5", "!player.buff(Shadow Dance)" }},
+{"Hemorrhage", {"@Nevo.Hemo()", "target.debuff(Hemorrhage).duration <= 0.5", "target.debuff(703).duration <= 3", "!player.buff(Shadow Dance)" }},
 
 --With anticipation
 {"Backstab", {
@@ -362,7 +362,7 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 {"703", { "!target.debuff(Rupture)"}, "target" },
 
 
-{"Ambush", { "target.alive"}, "target"}, --{
+{"Ambush", { "@Nevo.Ambush()"}, "target"}, --{
 --"target.debuff(Garrote)",
 --}},
 
