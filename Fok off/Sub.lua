@@ -29,7 +29,7 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 
 
 --Enrage dispells 
-{ "Shiv", "target.dispellable(Shiv)", "target" }, --such wow
+--{ "Shiv", "target.dispellable(Shiv)", "target" }, --such wow
 -- CHANGE THIS TO SHIV AND PLAY AROUND WIT IT DOE
 
 
@@ -168,7 +168,7 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 "!player.buff(Stealth)",
 "!player.buff(Vanish)",
 "player.buff(master of subtlety)",
-"target.debuff(Find weakness).duration <= 7.3",
+"target.debuff(Find weakness).duration <= 8",
 }},
 
 
