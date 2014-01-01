@@ -76,7 +76,7 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
   "player.spell(Vanish).cooldown >= 60 ",
   }},
   
-  {"Expose Armor", "target.debuff(Weakened armor).duration <= 2"},
+  {"Expose Armor", { "target.debuff(Weakened armor).duration <= 2", "toggle.Expose"}},
   
   {"#gloves"},
   
@@ -91,6 +91,7 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
   {"Vanish", {
   "modifier.cooldowns",
   "player.combopoints < 3",
+  "toggle.vanish",
   "!player.buff(adrenaline rush)",
   "player.energy >= 30",
   "player.buff(moderate insight)"
@@ -99,6 +100,7 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
   {"Vanish", {
 
   "modifier.cooldowns",
+  "toggle.vanish",
   "player.combopoints < 3",
   "!player.buff(adrenaline rush)",
   "player.energy >= 30",
@@ -109,6 +111,7 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
   "player.spell(114015).exists", --Anticipation
   "player.buff(115189).count <= 3", --Anticipation buff
   "modifier.cooldowns",
+  "toggle.vanish",
   "player.combopoints < 3",
   "!player.buff(adrenaline rush)",
   "player.energy >= 30",
@@ -120,6 +123,7 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
   "player.buff(115189).count <= 3", --Anticipation buff
   "modifier.cooldowns",
   "player.combopoints < 3",
+  "toggle.vanish",
   "!player.buff(adrenaline rush)",
   "player.energy >= 30",
   "player.buff(deep insight)"
@@ -250,4 +254,5 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
  ProbablyEngine.toggle.create('vanish', 'Interface\\Icons\\ability_vanish','Vanish','Enable or Disable use of Vanish') 
  ProbablyEngine.toggle.create('rupture', 'Interface\\Icons\\ability_rogue_rupture','Rupture','Enable or Disable use of Rupture')  
  ProbablyEngine.toggle.create('blade', 'Interface\\Icons\\ability_rogue_slicedice.png','Blade Flurry','Enable or Disable use of BladeFlurry') 
+ ProbablyEngine.toggle.create('Expose', 'Interface\\Icons\\Ability_warrior_riposte.png','Expose armor','Enable or Disable use of Expose armor. Use this if it bugs out on nazgrim / adds ect') 
  end)

@@ -168,7 +168,7 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 "!player.buff(Stealth)",
 "!player.buff(Vanish)",
 "player.buff(master of subtlety)",
-"target.debuff(Find weakness).duration <= 8",
+"target.debuff(Find weakness).duration <= 7.5",
 }},
 
 
