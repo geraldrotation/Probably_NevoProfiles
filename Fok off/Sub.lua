@@ -19,6 +19,12 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 
 { "Redirect", (function() return canRED("Player","Target") end)},
 
+{"Garrote", {
+	"player.buff(shadow dance)",
+	"!player.behind",
+	"target.debuff(find weakness).duration <= 3",
+}},
+
 -- Feint stuff
 
 --{ "Feint", {
@@ -378,10 +384,11 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 
 { "Redirect", (function() return canRED("Player","Target") end)},
 
-{"703", { "!target.debuff(Rupture)", }, "target" },
+{"703", { "!target.debuff(Rupture)" }, "target" },
+{"703", { "player.buff(shadow dance)" }, "target" },
 
 
-{"Ambush", { "@Nevo.Ambush()", "!player.buff(stealth)"}, "target"}, --{
+{"Ambush", { "@Nevo.Ambush()", "!player.buff(stealth)", "player.behind"}, "target"}, --{
 --"target.debuff(Garrote)",
 --}},
 
