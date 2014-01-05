@@ -40,6 +40,21 @@ function Nevo.Pooling()
 end
 
 
+--function Nevo.snd()
+-- if UnitAura("player", GetSpellInfo(5171)) == nil then
+--    return 0
+--else
+-- local SND,SNDtime,Dtime = SND,SNDtime,Dtime
+--  SND = select(7,UnitAura("player", GetSpellInfo(5171)))
+--  if SND then SNDtime = SND - GetTime() end
+--  Dtime = Nevo.GetSpellCD(1856)
+
+--  if Dtime <= 10 and SNDtime <= Dtime then 
+--    return true
+--end
+--end
+
+
 
 function Nevo.Ambush()
     if UnitPower("player") >= (38 + Nevo.Pooling()) then
@@ -48,7 +63,7 @@ function Nevo.Ambush()
 end
 
 function Nevo.BackStab()
-    if UnitPower("player") >= (35 + Nevo.Pooling()) then
+    if UnitPower("player") >= (34 + Nevo.Pooling()) then
         return true
     end
 end
@@ -141,6 +156,17 @@ function xrn:message(message)
   self:Show() 
 end 
 xrn:message("\.::NevoDarks Rogue::.")
+
+
+--STOLEN BUTTON STUFF PLZ
+
+--ProbablyEngine.condition.register("modifier.mouse4", function()
+--  return IsMouseButtonDown(4) == 1
+-- end)
+ 
+-- ProbablyEngine.condition.register("modifier.mouse5", function()
+--  return IsMouseButtonDown(5) == 1
+-- end)
 
 
 

@@ -78,6 +78,11 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 "player.combopoints >= 3",
 }},
 
+--{"slice and dice", {
+--"@Nevo.snd()",
+--"player.combopoints > 0"
+--}},
+
 
 ----if u see shit repeated its either not repeated or because im fucking with the ordering.
 
@@ -142,6 +147,12 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 "player.spell(Vanish).cooldown > 60",
 }},
 
+{{
+{"#trinket1"},
+{"#trinket2"},
+},{
+"player.buff(shadow dance)",
+}},
 
 {{
 {"Shadow dance", "target.debuff(Garrote).duration >= 8.5"},
@@ -168,7 +179,7 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 "!player.buff(Stealth)",
 "!player.buff(Vanish)",
 "player.buff(master of subtlety)",
-"target.debuff(Find weakness).duration <= 7.5",
+"target.debuff(Find weakness).duration <= 8.5",
 }},
 
 
@@ -202,6 +213,7 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 {"Vanish", "target.debuff(Hemorrhage).duration >= 3.5"},
 {"Vanish", "target.debuff(Rupture).duration >= 3.5"}
 },{
+"player.behind",
 "modifier.cooldowns",
 "toggle.vanish",
 "player.energy >= 55",
@@ -220,6 +232,7 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 },{
 "modifier.cooldowns",
 "toggle.vanish",
+"player.behind",
 "player.energy >= 55",
 "player.spell(114015).exists", --Anticipation
 "player.buff(115189).count > 1",
@@ -273,12 +286,14 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 "@Nevo.Ambush",
 "player.spell(114015).exists", --Anticipation
 "player.buff(115189).count <= 3", --Anticipation buff
+"player.behind"
 }},
 
 {"Ambush", {
 "@Nevo.Ambush",
 "!player.spell(114015).exists", --Anticipation
 "player.combopoints <= 4", --Anticipation buff
+"player.behind"
 }},
 
 {"Ambush", {
@@ -286,6 +301,7 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 "player.spell(114015).exists", --Anticipation
 "player.buff(115189).count >= 1", --Anticipation buff
 "player.combopoints < 5",
+"player.behind"
 }},
 
 
@@ -359,10 +375,13 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 ---OOC HERE
 {
 
-{"703", { "!target.debuff(Rupture)"}, "target" },
+
+{ "Redirect", (function() return canRED("Player","Target") end)},
+
+{"703", { "!target.debuff(Rupture)", }, "target" },
 
 
-{"Ambush", { "@Nevo.Ambush()"}, "target"}, --{
+{"Ambush", { "@Nevo.Ambush()", "!player.buff(stealth)"}, "target"}, --{
 --"target.debuff(Garrote)",
 --}},
 
@@ -375,7 +394,7 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 "!player.buff(Deadly poison)",
 }},
 
-
+{"stealth"},
 
 
 },

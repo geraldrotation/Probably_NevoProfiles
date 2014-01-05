@@ -151,6 +151,12 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
   "modifier.cooldowns"
   }},
   
+  {{
+{"#trinket1"},
+{"#trinket2"},
+},{
+"player.buff(adrenaline rush)",
+}},
   
   {"slice and dice", {
   "player.buff(slice and dice).duration <= 2.5",
