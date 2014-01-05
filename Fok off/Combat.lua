@@ -242,7 +242,7 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
   }, 
   --OOC 
   {
- {"Ambush", { "target.alive"}, "target"},
+ {"Ambush", { "target.alive", "!player.buff(stealth"}, "target"},
    -- Poisons
   { "Deadly Poison", {
    "player.alive",
@@ -252,8 +252,9 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
   { "Leeching Poison", "!player.buff(Leeching Poison)", "player.spell(108211).exists" },
    
    --AMBUSH FOR VANISHING AND OPENER YOU FKIN PUSSY M8
- {"Ambush", { "target.alive"}, "target"}, 
+ {"Ambush", { "target.alive", "!player.buff(stealth"}, "target"}, 
 
+{"stealth"},
   },
  function()
 -- ProbablyEngine.toggle.create('feint', 'Interface\\Icons\\ability_rogue_feint','Feint','Enable or Disable use of feint')
