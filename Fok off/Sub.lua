@@ -3,7 +3,6 @@
 -- Created on Dec 16th 2013 2:32 am
 ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 
-
 {"recuperate",{
 	"!target.alive",
 	"player.combopoints <= 3",
@@ -24,6 +23,8 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 	"!player.behind",
 	"target.debuff(find weakness).duration <= 3",
 }},
+
+
 
 -- Feint stuff
 
@@ -65,7 +66,7 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 {"Smoke bomb", "modifier.lalt"},
 
 -- Tricks of the trade focus target shit.
-{ "Tricks of the Trade", {"focus.exists", "focus" }},
+{"Tricks of the Trade","focus.exists","Focus"},
 
 
 --Something l0l
