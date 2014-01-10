@@ -19,7 +19,7 @@ function Nevo.Pooling()
     end   
 	
 	if Nevo.GetSpellCD(1856) <= 5 then
-			_Pooling = 33
+			_Pooling = 30
 			end
     local EndTime = select(7,UnitDebuff("target", GetSpellInfo(91021)))
     
