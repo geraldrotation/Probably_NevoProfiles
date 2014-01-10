@@ -19,18 +19,18 @@ function Nevo.Pooling()
     end   
 	
 	if Nevo.GetSpellCD(1856) <= 5 then
-			_Pooling = 25
+			_Pooling = 36
 			end
     local EndTime = select(7,UnitDebuff("target", GetSpellInfo(91021)))
     
     if EndTime and Nevo.GetSpellCD(1856) <= 5 then --Vanish off cd or soon to be then pool bitch pool
         local Remaining = EndTime - GetTime()
         if Remaining <= 5 then --Find weakness 
-            _Pooling = 35
+            _Pooling = 36
         end
     end
     if Nevo.GetSpellCD(51713) < 5 then
-        _Pooling = 40
+        _Pooling = 43
     end
 	if UnitBuff("player", GetSpellInfo(51713)) then --SHADOW DANCE SPAM SHIT YOLO SWAG ALL THE 420 SNAP BACKS
 		_Pooling = 0
@@ -53,7 +53,6 @@ end
 --    return true
 --end
 --end
-
 
 
 function Nevo.Ambush()
@@ -167,6 +166,9 @@ xrn:message("\.::NevoDarks Rogue::.")
 -- ProbablyEngine.condition.register("modifier.mouse5", function()
 --  return IsMouseButtonDown(5) == 1
 -- end)
+
+
+
 
 
 

@@ -133,6 +133,7 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
   
   {"Killing spree", {
   "modifier.cooldowns",
+  "toggle.spree",
   "player.energy < 35",
   "!player.buff (adrenaline rush)",
   "!player.buff (Shadow blades)",
@@ -141,7 +142,13 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
   
   {"Shadow blades", {
   "modifier.cooldowns",
+  "toggle.spree",
   "player.spell(killing spree).cooldown > 30"
+  }},
+
+ {"Shadow blades", {
+  "modifier.cooldowns",
+  "!toggle.spree",
   }},
   
   
@@ -248,7 +255,22 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
    "player.alive",
    "!player.buff(Deadly Poison)"
    }},
+
+   {"Blade flurry", {
+  "toggle.blade",
+  "!player.buff(blade flurry)",
+  --"player.spell(blade flurry).cooldown <= 11"
+}},
+
+{ "/cancelaura Blade Flurry", {
+  "!toggle.blade",
+  "player.buff(blade flurry)",
+}},
    
+{"Paralytic Poison",{
+  "player.alive",
+  "!player.buff(Paralytic Poison)"
+}},
   { "Leeching Poison", "!player.buff(Leeching Poison)", "player.spell(108211).exists" },
    
    --AMBUSH FOR VANISHING AND OPENER YOU FKIN PUSSY M8
@@ -258,6 +280,7 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
   },
  function()
 -- ProbablyEngine.toggle.create('feint', 'Interface\\Icons\\ability_rogue_feint','Feint','Enable or Disable use of feint')
+ ProbablyEngine.toggle.create('spree', 'Interface\\Icons\\Ability_rogue_murderspree.png','Killing Spree','Enable or Disable use of Killing Spree') 
  ProbablyEngine.toggle.create('vanish', 'Interface\\Icons\\ability_vanish','Vanish','Enable or Disable use of Vanish') 
  ProbablyEngine.toggle.create('rupture', 'Interface\\Icons\\ability_rogue_rupture','Rupture','Enable or Disable use of Rupture')  
  ProbablyEngine.toggle.create('blade', 'Interface\\Icons\\ability_rogue_slicedice.png','Blade Flurry','Enable or Disable use of BladeFlurry') 

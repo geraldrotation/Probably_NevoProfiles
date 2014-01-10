@@ -396,6 +396,10 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 --{"Ambush", {
 --"target.debuff(Rupture)",
 --}},
+{"Paralytic Poison",{
+  "player.alive",
+  "!player.buff(Paralytic Poison)"
+}},
 
 {"Deadly poison", {
 "!last(deadly poison)",
