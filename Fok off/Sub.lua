@@ -36,7 +36,7 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 
 
 --Enrage dispells 
---{ "Shiv", "target.dispellable(Shiv)", "target" }, --such wow
+--{ "Shiv", "target.dispellable(Shiv)", "target" }, such wow
 -- CHANGE THIS TO SHIV AND PLAY AROUND WIT IT DOE
 
 
@@ -50,11 +50,13 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 {"Fan of knives", {
 "modifier.multitarget",
 "!player.spell(114015).exists", --Anticipation
+"target.range <= 8",
 "player.combopoints <= 4",
 }},
 
 {"Fan of knives", {
 "modifier.multitarget",
+"target.range <= 8",
 "player.spell(114015).exists", --Anticipation
 "player.buff(115189).count <= 4", --Anticipation buff
 }},
