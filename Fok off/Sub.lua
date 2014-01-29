@@ -3,6 +3,8 @@
 -- Created on Dec 16th 2013 2:32 am
 ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 
+{"Kick", "modifier.interrupts"},
+
 {"recuperate",{
 	"!target.alive",
 	"player.combopoints <= 3",
