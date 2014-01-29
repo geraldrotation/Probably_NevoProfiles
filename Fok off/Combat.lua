@@ -1,4 +1,3 @@
-
 ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
 
 
@@ -6,7 +5,7 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
 
 --Testing github m8 swaglord 420
 
-
+{"Kick", "modifier.interrupts"},
 
 {"recuperate",{
   "!target.alive",
