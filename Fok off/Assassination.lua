@@ -1,7 +1,6 @@
-
 ProbablyEngine.rotation.register_custom(259, "~|cFFC41F3BNevoAssassin|r~", {
 
-
+{"Kick", "modifier.interrupts"},
 
   {"Cloak of shadows", "modifier.lshift"},
   
