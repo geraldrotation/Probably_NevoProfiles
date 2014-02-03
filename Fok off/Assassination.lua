@@ -58,6 +58,7 @@ ProbablyEngine.rotation.register_custom(259, "~|cFFC41F3BNevoAssassin|r~", {
  {"51723", { --FoK
  "player.combopoints < 5",
  "modifier.multitarget",
+ "target.range <= 8",
  }},
  
  {"79140", { --Vendetta
