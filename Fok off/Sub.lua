@@ -70,7 +70,7 @@ ProbablyEngine.rotation.register_custom(261, "~|cFFC41F3BNevoSub|r~", {
 {"Smoke bomb", "modifier.lalt"},
 
 -- Tricks of the trade focus target shit.
-{"Tricks of the Trade","focus.exists","Focus"},
+--{"Tricks of the Trade","focus.exists","Focus"},
 
 
 --Something l0l
