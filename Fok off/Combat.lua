@@ -53,7 +53,7 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
  {"#5512", "player.health <= 45"},
  
  -- Tricks of the trade focus target shit.
-{ "Tricks of the Trade", {"focus.exists", "focus" }},
+--{ "Tricks of the Trade", {"focus.exists", "focus" }},
 
 
   --AoE JK you dont do this your combat (Blade flurry is manual)
@@ -61,11 +61,13 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
   "modifier.multitarget",
   "player.combopoints = 5",
   "target.debuff(crimson tempest).duration <= 2",
+  "target.range <= 7",
   }},
   
   {"Fan of knives", {
   "modifier.multitarget",
-  "player.combopoints < 5"
+  "player.combopoints < 5",
+  "target.range <= 8"
   }},
   
   -- Shanking things.
