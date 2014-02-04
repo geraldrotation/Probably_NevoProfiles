@@ -275,7 +275,7 @@ ProbablyEngine.rotation.register_custom(260, "~|cFFC41F3BNevoCombat|r~", {
   { "Leeching Poison", "!player.buff(Leeching Poison)", "player.spell(108211).exists" },
    
    --AMBUSH FOR VANISHING AND OPENER YOU FKIN PUSSY M8
- {"Ambush", { "target.alive", "!player.buff(stealth"}, "target"}, 
+ {"Ambush", { "target.alive"}, "target"}, 
 
 {"stealth"},
   },
